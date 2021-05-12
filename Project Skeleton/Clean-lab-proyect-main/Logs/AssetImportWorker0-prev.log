@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.2/release' branch; Version is '2020.2.4f1 (becced5a802b) revision 12504301'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.867; Version 2009; 64bit' Language: 'es' Physical Memory: 16276 MB
+OS: 'Windows 10 Enterprise; OS build 19041.804; Version 2004; 64bit' Language: 'ca' Physical Memory: 16276 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,104 +11,265 @@ C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/batch_nps7xwz/Documents/GitHub/TFG/Clean projectm modify
+C:/Users/u53634/Downloads/Spoonlight_2.0-main/Joc
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63984
-Successfully changed project path to: C:/Users/batch_nps7xwz/Documents/GitHub/TFG/Clean projectm modify
-C:/Users/batch_nps7xwz/Documents/GitHub/TFG/Clean projectm modify
+61391
+Successfully changed project path to: C:/Users/u53634/Downloads/Spoonlight_2.0-main/Joc
+C:/Users/u53634/Downloads/Spoonlight_2.0-main/Joc
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 70.38 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 82.59 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.4f1 (becced5a802b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/batch_nps7xwz/Documents/GitHub/TFG/Clean projectm modify/Assets
+[Subsystems] Discovering subsystems at path C:/Users/u53634/Downloads/Spoonlight_2.0-main/Joc/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: AMD Radeon (TM) R9 380 Series (ID=0x6939)
+    Renderer: NVIDIA GeForce GTX 960 (ID=0x1401)
     Vendor:   
-    VRAM:     4071 MB
-    Driver:   27.20.12033.1007
+    VRAM:     2007 MB
+    Driver:   27.21.14.6109
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56008
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56964
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004872 seconds.
+Registered in 0.001880 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 57.32 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 79.69 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.091 seconds
+- Completed reload, in  2.115 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005384 seconds.
+Registered in 0.003546 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.08 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.270 seconds
+- Completed reload, in  3.280 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1412 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 137.7 MB.
-System memory in use after: 137.8 MB.
+Unloading 1405 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.5 MB.
+System memory in use after: 67.6 MB.
 
-Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 1851.
-Total: 2.014300 ms (FindLiveObjects: 0.165200 ms CreateObjectMapping: 0.059400 ms MarkObjects: 1.758800 ms  DeleteObjects: 0.029400 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(302852358823d7e4da8242f6e8827d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(302852358823d7e4da8242f6e8827d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd9462f4c71a72f0625df622bff8447d') in 0.020323 seconds
-  Import took 0.023542 seconds .
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 1835.
+Total: 3.189900 ms (FindLiveObjects: 0.264300 ms CreateObjectMapping: 0.095200 ms MarkObjects: 2.715900 ms  DeleteObjects: 0.112600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.446365 seconds.
-  path: Assets/Scenes/Edgar Scene.unity
+  path: Assets/Scenes/Sample Scene.unity
   artifactKey: Guid(28b01497748dc1a4599c1e6bca09c4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Edgar Scene.unity using Guid(28b01497748dc1a4599c1e6bca09c4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a1e7829e049b57911df962380ee3101') in 0.008396 seconds
-  Import took 0.011994 seconds .
+Start importing Assets/Scenes/Sample Scene.unity using Guid(28b01497748dc1a4599c1e6bca09c4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca2199f9a488cbd18528e9f560f544cc') in 0.030759 seconds
+  Import took 0.035474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(509a1b279f18d0649ba039c3502b57c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(509a1b279f18d0649ba039c3502b57c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcfaf06c9ee099c50864d515eda7a8bc') in 0.019356 seconds
+  Import took 0.025974 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 7.83 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 22 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 39.8 MB.
+System memory in use after: 40.0 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 1835.
+Total: 5.423000 ms (FindLiveObjects: 0.619000 ms CreateObjectMapping: 0.719500 ms MarkObjects: 4.049500 ms  DeleteObjects: 0.032300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 602.067897 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@backwards-run.FBX
+  artifactKey: Guid(478fe807cc09b09448250cacc1ab8eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@backwards-run.FBX using Guid(478fe807cc09b09448250cacc1ab8eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d8061a47404cebb1667696361f8740a') in 0.174446 seconds
+  Import took 0.177850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@idle.FBX
+  artifactKey: Guid(10cbb0afa2a98564a983cdaf3c1b7551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@idle.FBX using Guid(10cbb0afa2a98564a983cdaf3c1b7551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cb897369e99e3009b99f809fb32a828') in 0.020850 seconds
+  Import took 0.024189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@backwards-run.FBX
+  artifactKey: Guid(478fe807cc09b09448250cacc1ab8eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@backwards-run.FBX using Guid(478fe807cc09b09448250cacc1ab8eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d8061a47404cebb1667696361f8740a') in 0.017840 seconds
+  Import took 0.020549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@walk.FBX
+  artifactKey: Guid(77d7842e2139f594bb31c3c63d1ad4b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@walk.FBX using Guid(77d7842e2139f594bb31c3c63d1ad4b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f78a669c72f4e1c0d7c125bea034d4e4') in 0.018231 seconds
+  Import took 0.020901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@run.FBX
+  artifactKey: Guid(587fb8efeff01634aa9ce8a5af77911a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@run.FBX using Guid(587fb8efeff01634aa9ce8a5af77911a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98eb89034f97014307853a65bc0c2f39') in 0.018508 seconds
+  Import took 0.021316 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@pickup.FBX
+  artifactKey: Guid(b3662f281ce0fd5449670a910110afc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@pickup.FBX using Guid(b3662f281ce0fd5449670a910110afc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ce6ca84b210bebadf0fe74fbea746c') in 0.018734 seconds
+  Import took 0.022166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@jump-float.FBX
+  artifactKey: Guid(a61a057436c775f449fcb20e89101739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@jump-float.FBX using Guid(a61a057436c775f449fcb20e89101739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39990147fcacced846e51d3611c60c8c') in 0.019504 seconds
+  Import took 0.022380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@wave.FBX
+  artifactKey: Guid(09f13c3460d45ed43862ef43c7ddedb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@wave.FBX using Guid(09f13c3460d45ed43862ef43c7ddedb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1e1f7b0cc8972e8d3e2d8493046b832') in 0.017982 seconds
+  Import took 0.020618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@jump-down.FBX
+  artifactKey: Guid(e128858833d96dd46adee36a45c805cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@jump-down.FBX using Guid(e128858833d96dd46adee36a45c805cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2e31ce3f7b45d303356341590dd1bdb') in 0.019221 seconds
+  Import took 0.021888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@mpose.FBX
+  artifactKey: Guid(45d480461bbdc704587e117329ce8e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@mpose.FBX using Guid(45d480461bbdc704587e117329ce8e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe85526ea1dbc8b0256ae2d3aad53d5d') in 0.017870 seconds
+  Import took 0.020929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@jump-up.FBX
+  artifactKey: Guid(441579d7f72cae545a24352282ac90e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@jump-up.FBX using Guid(441579d7f72cae545a24352282ac90e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09b3c45a2bcf737fb74919bcc2ee7cda') in 0.018493 seconds
+  Import took 0.021486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Animations/common_people@backwards-walk.FBX
+  artifactKey: Guid(854ef493abe79464ca6e9795fb330040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Animations/common_people@backwards-walk.FBX using Guid(854ef493abe79464ca6e9795fb330040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54dd2188a78be8ec1bde84dee94ccd32') in 0.018256 seconds
+  Import took 0.021099 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005145 seconds.
+Registered in 0.001442 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.180 seconds
+- Completed reload, in  0.669 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1406 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 137.6 MB.
-System memory in use after: 137.7 MB.
+Unloading 1397 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.7 MB.
+System memory in use after: 84.8 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1853.
-Total: 2.059500 ms (FindLiveObjects: 0.176700 ms CreateObjectMapping: 0.062700 ms MarkObjects: 1.798600 ms  DeleteObjects: 0.020000 ms)
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 1848.
+Total: 1.707000 ms (FindLiveObjects: 0.176600 ms CreateObjectMapping: 0.045300 ms MarkObjects: 1.465000 ms  DeleteObjects: 0.018900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001556 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.644 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1397 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.7 MB.
+System memory in use after: 84.8 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1850.
+Total: 1.687900 ms (FindLiveObjects: 0.180600 ms CreateObjectMapping: 0.040500 ms MarkObjects: 1.451900 ms  DeleteObjects: 0.014100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 780.154527 seconds.
+  path: Assets/Timeline/CountertopsTimeline.playable
+  artifactKey: Guid(801b61fe1af755d4d839ef07674c5de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Timeline/CountertopsTimeline.playable using Guid(801b61fe1af755d4d839ef07674c5de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd7c8a8d202d6d195b2e6f40d76be9a2') in 0.021668 seconds
+  Import took 0.024071 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001405 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.686 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1397 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.7 MB.
+System memory in use after: 84.8 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1852.
+Total: 3.098300 ms (FindLiveObjects: 0.219900 ms CreateObjectMapping: 0.120000 ms MarkObjects: 2.723900 ms  DeleteObjects: 0.032100 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
