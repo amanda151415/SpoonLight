@@ -48,6 +48,8 @@ public class FiducialController : MonoBehaviour
     private UniducialLibrary.TuioManager m_TuioManager;
     private Camera m_MainCamera;
 
+    private bool triggered;
+
     //members
     private Vector2 m_ScreenPosition;
     private Vector3 m_WorldPosition;
@@ -93,6 +95,7 @@ public class FiducialController : MonoBehaviour
         this.m_RotationSpeed = 0f;
         this.m_RotationAcceleration = 0f;
         this.m_IsVisible = true;
+        this.triggered = false;
     }
 
     void Start()
@@ -351,6 +354,16 @@ public class FiducialController : MonoBehaviour
             {
                 gameObject.GetComponent<Renderer>().enabled = false;
             }
+        }
+    }
+
+    private void onTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PickUp"))
+        {
+            //Debug.Log("Triggered");
+            triggered = true;
+            Debug.Log("Trigger reached");
         }
     }
 

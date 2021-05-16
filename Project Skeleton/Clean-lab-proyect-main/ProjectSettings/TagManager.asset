@@ -21,6 +21,9 @@ TagManager:
   - CoreStarElement
   - Reward
   - objectiveTriangle
+  - PickUp
+  - Oven
+  - Sink
   layers:
   - Default
   - TransparentFX
