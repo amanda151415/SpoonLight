@@ -723,3 +723,4 @@ Received Import Request.
 Start importing Assets/Scripts/utilities/utility tracking for unity/Uniducial/FiducialController.cs using Guid(c42e5a96893570f4da7273114a9380f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a45828b9609881776cbe5281d30706d') in 0.065734 seconds
   Import took 0.070610 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
