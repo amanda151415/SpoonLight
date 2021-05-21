@@ -24,6 +24,15 @@ TagManager:
   - PickUp
   - Oven
   - Sink
+  - Table
+  - Plate
+  - Garbage
+  - pot
+  - Exit
+  - Tomatoes
+  - Meat
+  - Fridge
+  - Knife
   layers:
   - Default
   - TransparentFX

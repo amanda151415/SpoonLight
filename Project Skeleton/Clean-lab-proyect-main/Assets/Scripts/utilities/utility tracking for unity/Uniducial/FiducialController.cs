@@ -62,6 +62,8 @@ public class FiducialController : MonoBehaviour
 
     public float RotationMultiplier = 1;
 
+    private ingredientScript IngredientsSpawner;
+    private GameObject spawner;
 
     //Varaibles to control character animations
     private Animator animator;
@@ -69,8 +71,51 @@ public class FiducialController : MonoBehaviour
 
     List<Vector3> places;
 
+    private void OnCollisionEnter(Collision other)
+    {
+        // Cada vez que se detecte una colision miramos de que tipo es y hacemos una accion en función de eso
+        if (other.gameObject.CompareTag("Tomatoes"))
+        {
+            // Si hemos colisionado con el tomate spawneamos uno llamando al script IngredientsSpawner (que no he conseguido que me lo detecte)
+            // La idea es que el player se pueda llevar ese ingrediente en cuestion
+            Debug.Log("Hit Tomato!!");
+            IngredientsSpawner.SpawnTomato();
+        }
+        else if (other.gameObject.CompareTag("Meat"))
+        {
+            Debug.Log("Hit Meat!!");
+            IngredientsSpawner.SpawnMeat();
+        }
+        else if (other.gameObject.CompareTag("Knife"))
+        {
+            Debug.Log("Hit!!");
+        }
+        else if (other.gameObject.CompareTag("Oven"))
+        {
+            Debug.Log("Hit!!");
+        }
+        else if (other.gameObject.CompareTag("Fridge"))
+        {
+            Debug.Log("Hit!!");
+        }
+        else if (other.gameObject.CompareTag("Sink"))
+        {
+            Debug.Log("Hit!!");
+        }
+        else if (other.gameObject.CompareTag("Garbage"))
+        {
+            Debug.Log("Hit!!");
+        }
+        else if (other.gameObject.CompareTag("Plate"))
+        {
+            Debug.Log("Hit!!");
+        }
+    }
     void Awake()
     {
+        spawner = GameObject.Find("IngredientsSpawner");
+        ingredientsSpawner = spawner.GetComponent<ingredientScript>();
+
         places = new List<Vector3>();
         this.m_TuioManager = UniducialLibrary.TuioManager.Instance;
 
