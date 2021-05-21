@@ -48,8 +48,6 @@ public class FiducialController : MonoBehaviour
     private UniducialLibrary.TuioManager m_TuioManager;
     private Camera m_MainCamera;
 
-    private bool triggered;
-
     //members
     private Vector2 m_ScreenPosition;
     private Vector3 m_WorldPosition;
@@ -63,6 +61,11 @@ public class FiducialController : MonoBehaviour
     private bool m_IsVisible;
 
     public float RotationMultiplier = 1;
+
+
+    //Varaibles to control character animations
+    private Animator animator;
+    private bool isPaused = false;
 
     List<Vector3> places;
 
@@ -95,20 +98,20 @@ public class FiducialController : MonoBehaviour
         this.m_RotationSpeed = 0f;
         this.m_RotationAcceleration = 0f;
         this.m_IsVisible = true;
-        this.triggered = false;
     }
 
     void Start()
     {
         //get reference to main camera
         this.m_MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
+        animator = GetComponent<Animator>();
         //check if the main camera exists
         if (this.m_MainCamera == null)
         {
             Debug.LogError("There is no main camera defined in your scene.");
         }
     }
+
 
     void Update()
     {
@@ -152,76 +155,101 @@ public class FiducialController : MonoBehaviour
                 {
                     if (Input.GetKey(KeyCode.UpArrow))
                     {
-                        transform.position += Vector3.forward*0.5f;
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
+                        transform.position += Vector3.forward * 0.05f;
                     }
                     if (Input.GetKey(KeyCode.DownArrow))
                     {
-                        transform.position += Vector3.forward * -0.5f;
-                    } 
+                        transform.rotation = Quaternion.Euler(0, 180, 0);
+                        transform.position += Vector3.forward * -0.05f;
+                    }
                     if (Input.GetKey(KeyCode.RightArrow))
                     {
-                        transform.position += Vector3.right * 0.5f;
+                        transform.rotation = Quaternion.Euler(0, 90, 0);
+                        transform.position += Vector3.right * 0.05f;
                     }
                     if (Input.GetKey(KeyCode.LeftArrow))
                     {
-                        transform.position += Vector3.right * -0.5f;
-                    } 
+                        transform.rotation = Quaternion.Euler(0, -90, 0);
+                        transform.position += Vector3.right * -0.05f;
+                    }
+                    if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+                    {
+                        animator.SetBool("isMove", true);
+                    }
+                    else {
+                        animator.SetBool("isMove", false);
+                    }
+                        
                 }
                 if (MarkerID == 1)
                 {
                     if (Input.GetKey(KeyCode.Keypad8))
                     {
-                        transform.position += Vector3.forward * 0.5f;
+                        transform.position += Vector3.forward * 0.2f;
                     }
                     if (Input.GetKey(KeyCode.Keypad2))
                     {
-                        transform.position += Vector3.forward * -0.5f;
+                        transform.position += Vector3.forward * -0.2f;
                     }
                     if (Input.GetKey(KeyCode.Keypad6))
                     {
-                        transform.position += Vector3.right * 0.5f;
+                        transform.position += Vector3.right * 0.2f;
                     }
                     if (Input.GetKey(KeyCode.Keypad4))
                     {
-                        transform.position += Vector3.right * -0.5f;
+                        transform.position += Vector3.right * -0.2f;
                     }
                 }
                 if (MarkerID == 2)
                 {
                     if (Input.GetKey(KeyCode.W))
                     {
-                        transform.position += Vector3.forward * 0.5f;
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
+                        transform.position += Vector3.forward * 0.05f;
                     }
                     if (Input.GetKey(KeyCode.S))
                     {
-                        transform.position += Vector3.forward * -0.5f;
+                        transform.rotation = Quaternion.Euler(0, 180, 0);
+                        transform.position += Vector3.forward * -0.05f;
                     }
                     if (Input.GetKey(KeyCode.D))
                     {
-                        transform.position += Vector3.right * 0.5f;
+                        transform.rotation = Quaternion.Euler(0, 90, 0);
+                        transform.position += Vector3.right * 0.05f;
                     }
                     if (Input.GetKey(KeyCode.A))
                     {
-                        transform.position += Vector3.right * -0.5f;
+                        transform.rotation = Quaternion.Euler(0, -90, 0);
+                        transform.position += Vector3.right * -0.05f;
                     }
+                    if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+                    {
+                        animator.SetBool("isMove", true);
+                    }
+                    else
+                    {
+                        animator.SetBool("isMove", false);
+                    }
+
                 }
                 if (MarkerID == 3)
                 {
                     if (Input.GetKey(KeyCode.I))
                     {
-                        transform.position += Vector3.forward * 0.5f;
+                        transform.position += Vector3.forward * 0.2f;
                     }
                     if (Input.GetKey(KeyCode.K))
                     {
-                        transform.position += Vector3.forward * -0.5f;
+                        transform.position += Vector3.forward * -0.2f;
                     }
                     if (Input.GetKey(KeyCode.L))
                     {
-                        transform.position += Vector3.right * 0.5f;
+                        transform.position += Vector3.right * 0.2f;
                     }
                     if (Input.GetKey(KeyCode.J))
                     {
-                        transform.position += Vector3.right * -0.5f;
+                        transform.position += Vector3.right * -0.2f;
                     }
                 }
             }
@@ -269,7 +297,7 @@ public class FiducialController : MonoBehaviour
                 Logger.AddUserPosition(gameObject.name, m_WorldPosition);
             }
         }
-        
+
 
         //rotation mapping
         if (this.IsRotationMapped)
@@ -301,9 +329,11 @@ public class FiducialController : MonoBehaviour
         }
     }
 
-    private Vector3 computemedian() {
+    private Vector3 computemedian()
+    {
         Vector3 newpos = Vector3.zero;
-        foreach (Vector3 v in places) {
+        foreach (Vector3 v in places)
+        {
             newpos += v;
         }
         newpos = newpos / places.Count;
@@ -354,16 +384,6 @@ public class FiducialController : MonoBehaviour
             {
                 gameObject.GetComponent<Renderer>().enabled = false;
             }
-        }
-    }
-
-    private void onTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("PickUp"))
-        {
-            //Debug.Log("Triggered");
-            triggered = true;
-            Debug.Log("Trigger reached");
         }
     }
 
