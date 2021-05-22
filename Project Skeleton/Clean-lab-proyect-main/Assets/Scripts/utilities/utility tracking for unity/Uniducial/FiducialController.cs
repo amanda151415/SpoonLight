@@ -62,7 +62,7 @@ public class FiducialController : MonoBehaviour
 
     public float RotationMultiplier = 1;
 
-    private ingredientScript IngredientsSpawner;
+    //private ingredientScript IngredientsSpawner;
     private GameObject spawner;
 
     //Varaibles to control character animations
@@ -74,7 +74,7 @@ public class FiducialController : MonoBehaviour
     void Awake()
     {
         spawner = GameObject.Find("IngredientsSpawner");
-        ingredientsSpawner = spawner.GetComponent<ingredientScript>();
+        //ingredientsSpawner = spawner.GetComponent<ingredientScript>();
 
         places = new List<Vector3>();
         this.m_TuioManager = UniducialLibrary.TuioManager.Instance;
@@ -401,12 +401,12 @@ public class FiducialController : MonoBehaviour
             // Si hemos colisionado con el tomate spawneamos uno llamando al script IngredientsSpawner (que no he conseguido que me lo detecte)
             // La idea es que el player se pueda llevar ese ingrediente en cuestion
             Debug.Log("Hit Tomato!!");
-            IngredientsSpawner.SpawnTomato();
+            //IngredientsSpawner.SpawnTomato();
         }
         else if (other.gameObject.CompareTag("Meat"))
         {
             Debug.Log("Hit Meat!!");
-            IngredientsSpawner.SpawnMeat();
+            //IngredientsSpawner.SpawnMeat();
         }
         else if (other.gameObject.CompareTag("Knife"))
         {
