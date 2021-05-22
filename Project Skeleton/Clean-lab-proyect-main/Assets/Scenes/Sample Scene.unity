@@ -4474,6 +4474,10 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 7991347756513746205, guid: b572a90ea7c7059469ebe5cf56c1e71c, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -576306988693131404, guid: b572a90ea7c7059469ebe5cf56c1e71c, type: 2}
+    value: {fileID: 1004847201017077}
+  - key: {fileID: 5647696762229407922, guid: b572a90ea7c7059469ebe5cf56c1e71c, type: 2}
+    value: {fileID: 1100844758034629}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1793848087
@@ -4886,9 +4890,34 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7273926704747673450}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1004847201017077
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004847201017076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1100844758034627 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6489944837121497901, guid: 50fd2b79d6a1f174594d5d0e91767944,
+    type: 3}
+  m_PrefabInstance: {fileID: 6490535094942479342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1100844758034629 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6576025145757675947, guid: 50fd2b79d6a1f174594d5d0e91767944,
     type: 3}
   m_PrefabInstance: {fileID: 6490535094942479342}
   m_PrefabAsset: {fileID: 0}
@@ -5285,7 +5314,6 @@ MonoBehaviour:
   CameraOffset: 10
   RotateAround: 1
   RotationMultiplier: 1
-  ingredientsSpawner: {fileID: 0}
 --- !u!1 &6137497490073690922
 GameObject:
   m_ObjectHideFlags: 0
@@ -5326,7 +5354,6 @@ MonoBehaviour:
   CameraOffset: 10
   RotateAround: 1
   RotationMultiplier: 1
-  ingredientsSpawner: {fileID: 0}
 --- !u!4 &6137497490084400129
 Transform:
   m_ObjectHideFlags: 0
@@ -5411,17 +5438,17 @@ PrefabInstance:
     - target: {fileID: 6486254859389615913, guid: 50fd2b79d6a1f174594d5d0e91767944,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6486254859389615913, guid: 50fd2b79d6a1f174594d5d0e91767944,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -38.599003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6486254859389615913, guid: 50fd2b79d6a1f174594d5d0e91767944,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6489944837121497901, guid: 50fd2b79d6a1f174594d5d0e91767944,
         type: 3}
@@ -5742,7 +5769,7 @@ PrefabInstance:
     - target: {fileID: 7269484070377601116, guid: 2a6df6b49cca1aa4cad171895b81a11e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7269484070377601116, guid: 2a6df6b49cca1aa4cad171895b81a11e,
         type: 3}
@@ -5752,14 +5779,20 @@ PrefabInstance:
     - target: {fileID: 7269484070377601116, guid: 2a6df6b49cca1aa4cad171895b81a11e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7273801769116642206, guid: 2a6df6b49cca1aa4cad171895b81a11e,
         type: 3}
       propertyPath: m_Name
       value: Tomato
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7324765261320682090, guid: 2a6df6b49cca1aa4cad171895b81a11e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7324765261320682090, guid: 2a6df6b49cca1aa4cad171895b81a11e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2a6df6b49cca1aa4cad171895b81a11e, type: 3}
 --- !u!212 &7280575381387553737
 SpriteRenderer:

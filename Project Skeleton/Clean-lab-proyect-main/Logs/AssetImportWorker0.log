@@ -1,0 +1,223 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.4f1 (becced5a802b) revision 12504301'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.928; Version 2009; 64bit' Language: 'es' Physical Memory: 16317 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Unity\2020.2.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Documentos/Github/SpoonLight/Project Skeleton/Clean-lab-proyect-main
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52559
+Successfully changed project path to: D:/Documentos/Github/SpoonLight/Project Skeleton/Clean-lab-proyect-main
+D:/Documentos/Github/SpoonLight/Project Skeleton/Clean-lab-proyect-main
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 76.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.4f1 (becced5a802b)
+[Subsystems] Discovering subsystems at path D:/Unity/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Documentos/Github/SpoonLight/Project Skeleton/Clean-lab-proyect-main/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   
+    VRAM:     4043 MB
+    Driver:   27.21.14.6611
+Initialize mono
+Mono path[0] = 'D:/Unity/2020.2.4f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56852
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001341 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 41.17 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.084 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002072 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.975 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1407 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.9 MB.
+System memory in use after: 68.0 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 1839.
+Total: 1.917800 ms (FindLiveObjects: 0.180200 ms CreateObjectMapping: 0.035300 ms MarkObjects: 1.617500 ms  DeleteObjects: 0.083000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/utilities/utility tracking for unity/Uniducial/SimpleRotation.cs
+  artifactKey: Guid(6d0d9f2f50ece9b40bdbd2a31d6200a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/utilities/utility tracking for unity/Uniducial/SimpleRotation.cs using Guid(6d0d9f2f50ece9b40bdbd2a31d6200a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa894ad2a626b082a922ebd69971caa9') in 0.043042 seconds
+  Import took 0.045483 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.802 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1399 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.6 MB.
+System memory in use after: 67.7 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1841.
+Total: 1.722700 ms (FindLiveObjects: 0.175500 ms CreateObjectMapping: 0.036200 ms MarkObjects: 1.485300 ms  DeleteObjects: 0.024500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 480.268561 seconds.
+  path: Assets/Timeline/Cutscene.playable
+  artifactKey: Guid(b572a90ea7c7059469ebe5cf56c1e71c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Timeline/Cutscene.playable using Guid(b572a90ea7c7059469ebe5cf56c1e71c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e396526ab3d0a46b187a4099f03d8ac') in 0.026707 seconds
+  Import took 0.029275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 148.511270 seconds.
+  path: Assets/Timeline
+  artifactKey: Guid(6220867ffdf50d94b9ed66848e1abf24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Timeline using Guid(6220867ffdf50d94b9ed66848e1abf24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9e0f3433f54e9aa7df4597e9cd37345') in 0.003068 seconds
+  Import took 0.005786 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002166 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.804 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1399 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.7 MB.
+System memory in use after: 67.8 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1843.
+Total: 1.656100 ms (FindLiveObjects: 0.160500 ms CreateObjectMapping: 0.032500 ms MarkObjects: 1.444500 ms  DeleteObjects: 0.017300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.653300 seconds.
+  path: Assets/Timeline/New Animator Controller.controller
+  artifactKey: Guid(7d805aed5e7fd0747bb2f3f8d30e44e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Timeline/New Animator Controller.controller using Guid(7d805aed5e7fd0747bb2f3f8d30e44e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15d2af109afd0633496aa22d88f52953') in 0.013457 seconds
+  Import took 0.015787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 65.572130 seconds.
+  path: Assets/Timeline/ingredients.playable
+  artifactKey: Guid(52e89b5e0dcc0fc40aeb3d553020d20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Timeline/ingredients.playable using Guid(52e89b5e0dcc0fc40aeb3d553020d20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c316eeb68c83ec1c6c5eb0a41993aeb') in 0.004923 seconds
+  Import took 0.007414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001582 seconds.
+  path: Assets/Timeline/ingredients.playable
+  artifactKey: Guid(52e89b5e0dcc0fc40aeb3d553020d20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Timeline/ingredients.playable using Guid(52e89b5e0dcc0fc40aeb3d553020d20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c316eeb68c83ec1c6c5eb0a41993aeb') in 0.002366 seconds
+  Import took 0.004457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 174.319483 seconds.
+  path: Assets/Timeline/Rotation.playable
+  artifactKey: Guid(10b24915c38ebe54da1f02a373f1341c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Timeline/Rotation.playable using Guid(10b24915c38ebe54da1f02a373f1341c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc855e707fb3f1cf51e010bfce3cdf94') in 0.002903 seconds
+  Import took 0.005233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002843 seconds.
+  path: Assets/Timeline/Rotation.playable
+  artifactKey: Guid(10b24915c38ebe54da1f02a373f1341c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Timeline/Rotation.playable using Guid(10b24915c38ebe54da1f02a373f1341c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc855e707fb3f1cf51e010bfce3cdf94') in 0.002453 seconds
+  Import took 0.004494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 744.535776 seconds.
+  path: Assets/Timeline/Cutscene.playable
+  artifactKey: Guid(b572a90ea7c7059469ebe5cf56c1e71c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Timeline/Cutscene.playable using Guid(b572a90ea7c7059469ebe5cf56c1e71c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60209724805711370fb2651f92fc9826') in 0.015079 seconds
+  Import took 0.017921 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002026 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.801 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1399 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.7 MB.
+System memory in use after: 67.8 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1845.
+Total: 1.764300 ms (FindLiveObjects: 0.160700 ms CreateObjectMapping: 0.033600 ms MarkObjects: 1.545100 ms  DeleteObjects: 0.023600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 101.574493 seconds.
+  path: Assets/Timeline/Cutscene.playable
+  artifactKey: Guid(b572a90ea7c7059469ebe5cf56c1e71c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Timeline/Cutscene.playable using Guid(b572a90ea7c7059469ebe5cf56c1e71c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2ca51d9b709b73499da22d7862b1170') in 0.025777 seconds
+  Import took 0.040391 seconds .
+
