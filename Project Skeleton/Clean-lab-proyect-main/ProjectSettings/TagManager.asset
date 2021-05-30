@@ -33,6 +33,7 @@ TagManager:
   - Meat
   - Fridge
   - Knife
+  - Ingredient
   layers:
   - Default
   - TransparentFX
