@@ -34,6 +34,7 @@ TagManager:
   - Fridge
   - Knife
   - Ingredient
+  - Ingredient_box
   layers:
   - Default
   - TransparentFX

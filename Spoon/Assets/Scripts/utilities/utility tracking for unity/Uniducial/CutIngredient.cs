@@ -9,7 +9,7 @@ public class CutIngredient : MonoBehaviour
     public float scaleFactor;
     public Vector3 positionAdd;
 
-    public float cuttime = 5.0f;
+    public float cuttime = 500.0f;
 
 
 
@@ -34,12 +34,11 @@ public class CutIngredient : MonoBehaviour
         // Si existe, lo eliminamos
         if (child != null)
         {
-            if (cuttime > 0.0f)
-            {
-                cuttime -= Time.deltaTime;
-            }
-            
-            if (cuttime < 0.0f)
+           
+            cuttime -= Time.deltaTime;
+            float sec = cuttime % 60;
+
+            if (sec < 0.0f)
             {
 
                 Vector3 position = new Vector3(75, 7, 85);
@@ -50,16 +49,10 @@ public class CutIngredient : MonoBehaviour
                 ingredient.transform.position = other.transform.position + positionAdd;
                 ingredient.transform.localScale = new Vector3(1, 1, 1) * scaleFactor;
                 Destroy(child);
-
-                
+           
                 Debug.Log("Entro");
-                
 
-                cuttime = 0.0f;
-          
-            }
-            
-
+            }        
 
 
         }
@@ -67,7 +60,7 @@ public class CutIngredient : MonoBehaviour
 
     private void OnCollisionExit(Collision other)
     {
-        cuttime = 5.0f;
+        cuttime = 500.0f;
         Debug.Log("Surto");
     }
 
