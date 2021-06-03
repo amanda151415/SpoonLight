@@ -7,17 +7,10 @@ TagManager:
   - ParticlePool
   - Player1
   - Player2
-  - Particle
-  - AstralElement
-  - RoamingObject
-  - StarElement
   - TunnelElement
   - Overlay
   - DestructionElement
   - Effect
-  - Capsule
-  - Indicator
-  - ChosenPlanet
   - CoreStarElement
   - Reward
   - objectiveTriangle
@@ -35,6 +28,10 @@ TagManager:
   - Knife
   - Ingredient
   - Ingredient_box
+  - Indicator
+  - CutIngredient
+  - CookedIngredient
+  - OvercookedIngredient
   layers:
   - Default
   - TransparentFX

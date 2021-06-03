@@ -14,7 +14,7 @@ public class RemoveIngredients : MonoBehaviour
         // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un ingrediente
         foreach (Transform child_t in collider_t)
         {
-            if (child_t.tag == "Ingredient")
+            if (child_t.tag == "Ingredient" || child_t.tag == "CutIngredient" || child_t.tag == "CookedIngredient" || child_t.tag == "OvercookedIngredient")
             {
                 child = child_t.gameObject;
             }

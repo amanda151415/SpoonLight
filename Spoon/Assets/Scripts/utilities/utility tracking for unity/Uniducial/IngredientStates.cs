@@ -6,12 +6,6 @@ using UnityEngine;
 
 public class IngredientStates : MonoBehaviour
 {
-
-    public class Global
-    {
-        public static int ingr_count = 0;
-    }
-
     //public List<GameObject> ingredientsList = new List<GameObject>();
     public float scaleFactor;
     public Vector3 positionAdd;
@@ -20,47 +14,47 @@ public class IngredientStates : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        GameObject child = null;
 
-
+        GameObject collider = other.gameObject;
+        Transform collider_t = other.transform;
         if (gameObject.CompareTag("Ingredient_box"))
         {
+            foreach (Transform child_t in collider_t)
+            {
+                if (child_t.tag == "Ingredient" || child_t.tag == "CutIngredient" || child_t.tag == "CookedIngredient" || child_t.tag == "OvercookedIngredient")
+                {
+                    child = child_t.gameObject;
+                }
+            }
 
-            Spawn(other);
-
+            // En el caso de que el player no lleve ningún otro ingrediente del tipo que sea, instanciamos uno nuevo
+            if (child == null)
+            {
+                Spawn(other);
+            }
         }
+
         if (gameObject.CompareTag("Garbage"))
         {
             RemoveIngredient(other);
-
         }
-
-
     }
 
     void Spawn(Collision other)
     {
-        if (Global.ingr_count == 0)
-        {
-            Vector3 position = new Vector3(75, 7, 85);
-            GameObject ingredient = Instantiate(ingredientPrefab, position, ingredientPrefab.transform.rotation);
-            // Instanciamos el ingrediente como un hijo del player para que así lo siga
-            ingredient.transform.parent = other.transform;
-            ingredient.transform.position = other.transform.position + positionAdd;
-            ingredient.transform.localScale = new Vector3(1, 1, 1) * scaleFactor;
-            //ingredientsList.Add(ingredient);
-            Global.ingr_count = Global.ingr_count + 1;
-            Debug.Log(Global.ingr_count);
-
-        }
-
+        Vector3 position = new Vector3(75, 7, 85);
+        GameObject ingredient = Instantiate(ingredientPrefab, position, ingredientPrefab.transform.rotation);
+        // Instanciamos el ingrediente como un hijo del player para que así lo siga
+        ingredient.transform.parent = other.transform;
+        ingredient.transform.position = other.transform.position + positionAdd;
+        ingredient.transform.localScale = new Vector3(1, 1, 1) * scaleFactor;
+        //ingredientsList.Add(ingredient);
     }
 
     void RemoveIngredient(Collision other)
     {
-        Debug.Log(Global.ingr_count);
-        if (Global.ingr_count >= 0)
         {
-            Debug.Log(Global.ingr_count);
             GameObject child = null;
 
             GameObject collider = other.gameObject;
@@ -68,7 +62,7 @@ public class IngredientStates : MonoBehaviour
             // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un ingrediente
             foreach (Transform child_t in collider_t)
             {
-                if (child_t.tag == "Ingredient")
+                if (child_t.tag == "Ingredient" || child_t.tag == "CutIngredient" || child_t.tag == "CookedIngredient" || child_t.tag == "OvercookedIngredient")
                 {
                     child = child_t.gameObject;
                 }
@@ -77,18 +71,10 @@ public class IngredientStates : MonoBehaviour
             // Si existe, lo eliminamos
             if (child != null)
             {
-                Debug.Log("Entro");
                 Destroy(child);
-                Global.ingr_count = Global.ingr_count - 1;
             }
-
-
         }
-
     }
-
-
-
 
     // Start is called before the first frame update
     void Start()
