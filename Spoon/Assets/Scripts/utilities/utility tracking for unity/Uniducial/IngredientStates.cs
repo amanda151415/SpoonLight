@@ -62,8 +62,8 @@ public class IngredientStates : MonoBehaviour
             // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un ingrediente
             foreach (Transform child_t in collider_t)
             {
-                if (child_t.tag == "Ingredient" || child_t.tag == "CutIngredient" || child_t.tag == "CookedIngredient" || child_t.tag == "OvercookedIngredient")
-                {
+                // NO SE SI AL ELIMINAR EL PLATO SE ELIMINARAN TAMBIEN SUS HIJOS. ASUMO QUE SI, PERO TENDRIA QUE HACER PRUEBAS. SINO ESTO NO FUNCIONARÁ YA QUE ELIMINARÁ SOLO EL ÚLTIMO CHILD QUE SE COMPRUEBE
+                if (child_t.tag == "Ingredient" || child_t.tag == "CutIngredient" || child_t.tag == "CookedIngredient" || child_t.tag == "OvercookedIngredient" || child_t.tag == "Plate" ){
                     child = child_t.gameObject;
                 }
             }

@@ -13,9 +13,26 @@ public class CookIngredient : MonoBehaviour
 
     private void OnCollisionStay(Collision other)
     {
-        cookTime -= Time.deltaTime;
-        // Convertimos a segundos
-        float sec = cookTime % 60;
+        // QUIZÁ SE PUEDE METER EL CHILD EN UNA VARIABLE? ASI NO HAY QUE HACER ESTOS CALCULITOS DOS VECES
+        GameObject child = null;
+
+        GameObject collider = other.gameObject;
+        Transform collider_t = other.transform;
+        // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un ingrediente
+        foreach (Transform child_t in collider_t)
+        {
+            // Contamos solo si es un ingrediente. No nos interesa cocinar elementos cortados, cocinados o quemados 
+            if (child_t.tag == "Ingredient")
+            {
+                cookTime -= Time.deltaTime;
+                // Convertimos a segundos
+                float sec = cookTime % 60;
+            }
+            else if (child_t.tag == "OvercookedIngredient" || child_t.tag == "CookedIngredient" || child_t.tag == "CutIngredient")
+            {
+                Debug.Log("Sonidito");
+            }
+        }
     }
 
     private void OnCollisionExit(Collision other)
@@ -27,7 +44,7 @@ public class CookIngredient : MonoBehaviour
         // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un ingrediente
         foreach (Transform child_t in collider_t)
         {
-            if (child_t.tag == "Ingredient" || child_t.tag == "CutIngredient" || child_t.tag == "CookedIngredient" || child_t.tag == "OvercookedIngredient")
+            if (child_t.tag == "Ingredient")
             {
                 child = child_t.gameObject;
             }
