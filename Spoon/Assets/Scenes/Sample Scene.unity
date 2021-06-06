@@ -751,8 +751,8 @@ MonoBehaviour:
     type: 3}
   overcooked_meat: {fileID: 1391160862818300, guid: 2822baf52b274144091e746e055634ad,
     type: 3}
-  scaleFactor: 1
-  positionAdd: {x: 0, y: 0, z: 0}
+  scaleFactor: 0.6
+  positionAdd: {x: 6, y: 0, z: 0}
 --- !u!1001 &219290341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2069,8 +2069,8 @@ MonoBehaviour:
     type: 3}
   overcooked_meat: {fileID: 1277483834372416, guid: d3c3e6c8e08dfc94aa7f6d65820967e4,
     type: 3}
-  scaleFactor: 1
-  positionAdd: {x: 0, y: 0, z: 0}
+  scaleFactor: 0.6
+  positionAdd: {x: 0, y: 0, z: 6}
 --- !u!4 &578950667 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6769992084103514405, guid: 351674f5e385dab489810361428275cc,

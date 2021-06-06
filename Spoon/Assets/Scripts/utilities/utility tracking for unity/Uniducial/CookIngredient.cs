@@ -60,7 +60,7 @@ public class CookIngredient : MonoBehaviour
             {
                 //cooking_ingredient.renderer.material.color = new Color(1, 1, 1);
                 var ingredient_renderer = cooking_ingredient.transform.GetChild(0).GetComponent<Renderer>();
-                ingredient_renderer.material.color = Color.blue;
+                ingredient_renderer.material.color = new Color(92,15,15);
                 cooking_ingredient.tag = "CookedIngredient";
                 Debug.Log(cooking_ingredient.tag);
                 cooking_ingredient.transform.parent = other.transform;
