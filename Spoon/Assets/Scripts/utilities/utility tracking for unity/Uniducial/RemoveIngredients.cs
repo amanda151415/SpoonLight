@@ -23,6 +23,8 @@ public class RemoveIngredients : MonoBehaviour
         // Si existe, lo eliminamos
         if (child != null)
         {
+            SoundManager.Instance.PlayDropTrash();//
+
             Debug.Log("Entro");
             Destroy(child);
         }

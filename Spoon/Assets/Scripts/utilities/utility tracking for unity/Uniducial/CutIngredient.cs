@@ -28,6 +28,8 @@ public class CutIngredient : MonoBehaviour
         // Si existe, lo eliminamos
         if (child != null)
         {
+            SoundManager.Instance.PlayKnifeCut();//
+
             cuttime -= Time.deltaTime;
             float sec = cuttime % 60;
 
@@ -36,7 +38,7 @@ public class CutIngredient : MonoBehaviour
                 Vector3 position = new Vector3(75, 7, 85);
 
                 GameObject ingredient = Instantiate(tomato_cutted, child.transform.position, Quaternion.identity);
-                // Instanciamos el ingrediente como un hijo del player para que así lo siga
+                // Instanciamos el ingrediente como un hijo del player para que asï¿½ lo siga
                 ingredient.transform.parent = other.transform;
                 ingredient.transform.position = other.transform.position + positionAdd;
                 ingredient.transform.localScale = new Vector3(1, 1, 1) * scaleFactor;

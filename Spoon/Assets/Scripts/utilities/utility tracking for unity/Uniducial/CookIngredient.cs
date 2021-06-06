@@ -25,7 +25,9 @@ public class CookIngredient : MonoBehaviour
             // Cocinamos solo si es un ingrediente. No nos interesa cocinar elementos cortados, cocinados o quemados 
             if (child_t.tag == "Ingredient" && !isCooking)
             {
-                // Instanciamos el child en la variable cooking_ingredient, para así poder recoger el ingrediente al volver
+                // Instanciamos el child en la variable cooking_ingredient, para asï¿½ poder recoger el ingrediente al volver
+                SoundManager.Instance.PlayFryPan();//
+
                 cooking_ingredient = GameObject.Instantiate(child_t.gameObject);
                 isCooking = true;
                 Debug.Log("Cooking");
@@ -78,7 +80,7 @@ public class CookIngredient : MonoBehaviour
     }
     //private void OnCollisionStay(Collision other)
     //{
-    //    // QUIZÁ SE PUEDE METER EL CHILD EN UNA VARIABLE? ASI NO HAY QUE HACER ESTOS CALCULITOS DOS VECES
+    //    // QUIZï¿½ SE PUEDE METER EL CHILD EN UNA VARIABLE? ASI NO HAY QUE HACER ESTOS CALCULITOS DOS VECES
     //    GameObject child = null;
 
     //    GameObject collider = other.gameObject;
@@ -124,7 +126,7 @@ public class CookIngredient : MonoBehaviour
     //            Vector3 position = new Vector3(75, 7, 85);
 
     //            GameObject ingredient = Instantiate(overcooked_meat, child.transform.position, Quaternion.identity);
-    //            // Instanciamos el ingrediente como un hijo del player para que así lo siga
+    //            // Instanciamos el ingrediente como un hijo del player para que asï¿½ lo siga
     //            ingredient.transform.parent = other.transform;
     //            ingredient.transform.position = other.transform.position + positionAdd;
     //            ingredient.transform.localScale = new Vector3(1, 1, 1) * scaleFactor;
@@ -136,7 +138,7 @@ public class CookIngredient : MonoBehaviour
     //            Vector3 position = new Vector3(75, 7, 85);
 
     //            GameObject ingredient = Instantiate(cooked_meat, child.transform.position, Quaternion.identity);
-    //            // Instanciamos el ingrediente como un hijo del player para que así lo siga
+    //            // Instanciamos el ingrediente como un hijo del player para que asï¿½ lo siga
     //            ingredient.transform.parent = other.transform;
     //            ingredient.transform.position = other.transform.position + positionAdd;
     //            ingredient.transform.localScale = new Vector3(1, 1, 1) * scaleFactor;

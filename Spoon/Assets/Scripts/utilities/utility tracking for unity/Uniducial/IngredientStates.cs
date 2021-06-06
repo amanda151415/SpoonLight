@@ -28,7 +28,7 @@ public class IngredientStates : MonoBehaviour
                 }
             }
 
-            // En el caso de que el player no lleve ningún otro ingrediente del tipo que sea, instanciamos uno nuevo
+            // En el caso de que el player no lleve ningï¿½n otro ingrediente del tipo que sea, instanciamos uno nuevo
             if (child == null)
             {
                 Spawn(other);
@@ -43,9 +43,11 @@ public class IngredientStates : MonoBehaviour
 
     void Spawn(Collision other)
     {
+        SoundManager.Instance.PlayPickUp();//
+
         Vector3 position = new Vector3(75, 7, 85);
         GameObject ingredient = Instantiate(ingredientPrefab, position, ingredientPrefab.transform.rotation);
-        // Instanciamos el ingrediente como un hijo del player para que así lo siga
+        // Instanciamos el ingrediente como un hijo del player para que asï¿½ lo siga
         ingredient.transform.parent = other.transform;
         ingredient.transform.position = other.transform.position + positionAdd;
         ingredient.transform.localScale = new Vector3(1, 1, 1) * scaleFactor;
@@ -62,7 +64,7 @@ public class IngredientStates : MonoBehaviour
             // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un ingrediente
             foreach (Transform child_t in collider_t)
             {
-                // NO SE SI AL ELIMINAR EL PLATO SE ELIMINARAN TAMBIEN SUS HIJOS. ASUMO QUE SI, PERO TENDRIA QUE HACER PRUEBAS. SINO ESTO NO FUNCIONARÁ YA QUE ELIMINARÁ SOLO EL ÚLTIMO CHILD QUE SE COMPRUEBE
+                // NO SE SI AL ELIMINAR EL PLATO SE ELIMINARAN TAMBIEN SUS HIJOS. ASUMO QUE SI, PERO TENDRIA QUE HACER PRUEBAS. SINO ESTO NO FUNCIONARï¿½ YA QUE ELIMINARï¿½ SOLO EL ï¿½LTIMO CHILD QUE SE COMPRUEBE
                 if (child_t.tag == "Ingredient" || child_t.tag == "CutIngredient" || child_t.tag == "CookedIngredient" || child_t.tag == "OvercookedIngredient" || child_t.tag == "Plate" ){
                     child = child_t.gameObject;
                 }
