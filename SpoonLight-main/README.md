@@ -1,2 +1,0 @@
-# SpoonLight
-InteractiveSystems Project - UPF
