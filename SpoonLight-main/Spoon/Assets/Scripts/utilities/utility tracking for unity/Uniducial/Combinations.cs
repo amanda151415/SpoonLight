@@ -146,6 +146,7 @@ public class Combinations : MonoBehaviour
         if (n_t == tomata_count_1 && n_m == meat_count_1)
         {
             point += 1;
+            GetComponent<AudioSource>().Play();
             Debug.Log(child_t.tag);
             Destroy(child_t);
             recipe_done = true;

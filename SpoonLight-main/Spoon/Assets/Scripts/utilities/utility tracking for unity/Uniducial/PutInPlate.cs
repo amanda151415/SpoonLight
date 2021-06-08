@@ -24,7 +24,7 @@ public class PutInPlate : MonoBehaviour
             // No nos interesa meter en el plato ingredientes quemados
             else if (child_t.tag == "OvercookedIngredient")
             {
-                Debug.Log("Sonidito");
+                GetComponent<AudioSource>().Play();
             }
         }
 
