@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Plate : MonoBehaviour
 {
     public float scaleFactor;
@@ -46,6 +47,14 @@ public class Plate : MonoBehaviour
 
             if (tomata_count_1 == 2)
             {
+                GameObject ingredient = Instantiate(collider, collider.transform.position, collider.transform.rotation);
+                ingredient.transform.parent = collider.transform.parent;
+                ingredient.transform.position = collider.transform.position;
+                ingredient.transform.localScale = collider.transform.localScale;
+                foreach (Transform ing_ch in ingredient.transform)
+                {
+                    Destroy(ing_ch.gameObject);
+                }
                 collider_t.GetComponent<BoxCollider>().enabled = false;
                 collider_t.transform.parent = gameObject.transform;
                 collider_t.transform.position = gameObject.transform.position + positionAdd;
@@ -56,6 +65,14 @@ public class Plate : MonoBehaviour
 
             else if (tomata_count_1 == 1 && meat_count_1 == 1)
             {
+                GameObject ingredient = Instantiate(collider, collider.transform.position, collider.transform.rotation);
+                ingredient.transform.parent = collider.transform.parent;
+                ingredient.transform.position = collider.transform.position;
+                ingredient.transform.localScale = collider.transform.localScale;
+                foreach (Transform ing_ch in ingredient.transform)
+                {
+                    Destroy(ing_ch.gameObject);
+                }
                 collider_t.GetComponent<BoxCollider>().enabled = false;
                 collider_t.transform.parent = gameObject.transform;
                 collider_t.transform.position = gameObject.transform.position + positionAdd;
@@ -66,6 +83,14 @@ public class Plate : MonoBehaviour
 
             else if (tomata_count_1 == 1)
             {
+                GameObject ingredient = Instantiate(collider, collider.transform.position, collider.transform.rotation);
+                ingredient.transform.parent = collider.transform.parent;
+                ingredient.transform.position = collider.transform.position;
+                ingredient.transform.localScale = collider.transform.localScale;
+                foreach (Transform ing_ch in ingredient.transform)
+                {
+                    Destroy(ing_ch.gameObject);
+                }
                 collider_t.GetComponent<BoxCollider>().enabled = false;
                 collider_t.transform.parent = gameObject.transform;
                 collider_t.transform.position = gameObject.transform.position + positionAdd;
@@ -75,6 +100,14 @@ public class Plate : MonoBehaviour
 
             else if (meat_count_2 == 1)
             {
+                GameObject ingredient = Instantiate(collider, collider.transform.position, collider.transform.rotation);
+                ingredient.transform.parent = collider.transform.parent;
+                ingredient.transform.position = collider.transform.position;
+                ingredient.transform.localScale = collider.transform.localScale;
+                foreach (Transform ing_ch in ingredient.transform)
+                {
+                    Destroy(ing_ch.gameObject);
+                }
                 collider_t.GetComponent<BoxCollider>().enabled = false;
                 collider_t.transform.parent = gameObject.transform;
                 collider_t.transform.position = gameObject.transform.position + positionAdd;
@@ -108,6 +141,14 @@ public class Plate : MonoBehaviour
 
             if (tomata_count_2 == 2)
             {
+                GameObject ingredient = Instantiate(collider, collider.transform.position, collider.transform.rotation);
+                ingredient.transform.parent = collider.transform.parent;
+                ingredient.transform.position = collider.transform.position;
+                ingredient.transform.localScale = collider.transform.localScale;
+                foreach (Transform ing_ch in ingredient.transform)
+                {
+                    Destroy(ing_ch.gameObject);
+                }
                 collider_t.GetComponent<BoxCollider>().enabled = false;
                 collider_t.transform.parent = gameObject.transform;
                 collider_t.transform.position = gameObject.transform.position + positionAdd;
@@ -117,6 +158,14 @@ public class Plate : MonoBehaviour
 
             else if (tomata_count_2 == 1 && meat_count_2 == 1)
             {
+                GameObject ingredient = Instantiate(collider, collider.transform.position, collider.transform.rotation);
+                ingredient.transform.parent = collider.transform.parent;
+                ingredient.transform.position = collider.transform.position;
+                ingredient.transform.localScale = collider.transform.localScale;
+                foreach (Transform ing_ch in ingredient.transform)
+                {
+                    Destroy(ing_ch.gameObject);
+                }
                 collider_t.GetComponent<BoxCollider>().enabled = false;
                 collider_t.transform.parent = gameObject.transform;
                 collider_t.transform.position = gameObject.transform.position + positionAdd;
@@ -127,6 +176,14 @@ public class Plate : MonoBehaviour
 
             else if (tomata_count_2 == 1)
             {
+                GameObject ingredient = Instantiate(collider, collider.transform.position, collider.transform.rotation);
+                ingredient.transform.parent = collider.transform.parent;
+                ingredient.transform.position = collider.transform.position;
+                ingredient.transform.localScale = collider.transform.localScale;
+                foreach (Transform ing_ch in ingredient.transform)
+                {
+                    Destroy(ing_ch.gameObject);
+                }
                 collider_t.GetComponent<BoxCollider>().enabled = false;
                 collider_t.transform.parent = gameObject.transform;
                 collider_t.transform.position = gameObject.transform.position + positionAdd;
@@ -136,6 +193,14 @@ public class Plate : MonoBehaviour
 
             else if (meat_count_2 == 1)
             {
+                GameObject ingredient = Instantiate(collider, collider.transform.position, collider.transform.rotation);
+                ingredient.transform.parent = collider.transform.parent;
+                ingredient.transform.position = collider.transform.position;
+                ingredient.transform.localScale = collider.transform.localScale;
+                foreach (Transform ing_ch in ingredient.transform)
+                {
+                    Destroy(ing_ch.gameObject);
+                }
                 collider_t.GetComponent<BoxCollider>().enabled = false;
                 collider_t.transform.parent = gameObject.transform;
                 collider_t.transform.position = gameObject.transform.position + positionAdd;

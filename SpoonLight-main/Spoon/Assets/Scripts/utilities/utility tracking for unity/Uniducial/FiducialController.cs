@@ -161,22 +161,22 @@ public class FiducialController : MonoBehaviour
                     if (Input.GetKey(KeyCode.UpArrow))
                     {
                         transform.rotation = Quaternion.Euler(0, 0, 0);
-                        transform.position += Vector3.forward * 0.05f;
+                        transform.position += Vector3.forward * 0.15f;
                     }
                     if (Input.GetKey(KeyCode.DownArrow))
                     {
                         transform.rotation = Quaternion.Euler(0, 180, 0);
-                        transform.position += Vector3.forward * -0.05f;
+                        transform.position += Vector3.forward * -0.15f;
                     }
                     if (Input.GetKey(KeyCode.RightArrow))
                     {
                         transform.rotation = Quaternion.Euler(0, 90, 0);
-                        transform.position += Vector3.right * 0.05f;
+                        transform.position += Vector3.right * 0.15f;
                     }
                     if (Input.GetKey(KeyCode.LeftArrow))
                     {
                         transform.rotation = Quaternion.Euler(0, -90, 0);
-                        transform.position += Vector3.right * -0.05f;
+                        transform.position += Vector3.right * -0.15f;
                     }
                     if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
                     {

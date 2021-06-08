@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 7269757933042351280}
   m_Layer: 0
   m_Name: Tomato_Mid__609_Tris_
-  m_TagString: Untagged
+  m_TagString: prova
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 7276977276440169214}
   m_Layer: 0
   m_Name: Tomato_High__859_Tris_
-  m_TagString: Untagged
+  m_TagString: prova
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 7269608145664207558}
   m_Layer: 0
   m_Name: Tomato_Low__359_Tris_
-  m_TagString: Untagged
+  m_TagString: prova
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
