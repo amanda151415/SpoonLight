@@ -56,7 +56,6 @@ public class CutIngredient : MonoBehaviour
 
             cuttime -= Time.deltaTime;
             float sec = cuttime % 60;
-            Debug.Log(cuttime);
 
             if (cuttime < 0.0f)
             {
@@ -80,7 +79,6 @@ public class CutIngredient : MonoBehaviour
         ResetAnimateBar();
         GetComponent<AudioSource>().Stop();
         cuttime = 5.0f;
-        Debug.Log("Exit:)");
     }
 
     public void AnimateBar()

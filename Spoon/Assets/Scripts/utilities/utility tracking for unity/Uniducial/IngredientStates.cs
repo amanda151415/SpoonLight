@@ -15,8 +15,6 @@ public class IngredientStates : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject.name);
-
         GameObject child = null;
 
         GameObject collider = other.gameObject;

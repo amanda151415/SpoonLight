@@ -24,9 +24,11 @@ public class RemoveIngredients : MonoBehaviour
         if (child != null)
         {
             SoundManager.Instance.PlayDropTrash();//
-
-            Debug.Log("Entro");
             Destroy(child);
+
+            // Reseteamos la variable passed
+            Plate plateScript = collider.GetComponent<Plate>();
+            plateScript.passed = false;
         }
     }
 

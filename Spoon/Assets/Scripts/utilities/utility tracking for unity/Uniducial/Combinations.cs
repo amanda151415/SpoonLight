@@ -60,21 +60,18 @@ public class Combinations : MonoBehaviour
         {
             foreach (Transform child_t in collider_t)
             {
-
-                if (child_t.tag == "Plate")
+                // El player tiene que tener un plato y haberselo pasado almenos una vez con el otro player para mirar si coincide con la receta
+                Plate plateScript = collider.GetComponent<Plate>();
+                if (child_t.tag == "Plate" & plateScript.passed == true)
                 {
+
                     object_to_destroy = child_t.gameObject;
 
-                    Score(object_to_destroy);
+                    Score(object_to_destroy, plateScript);
                 }
-                
-
             }
         }
-        
     }
-
-
         IEnumerator WaitBeforeRemove()
     {
         bool start = true;
@@ -139,7 +136,7 @@ public class Combinations : MonoBehaviour
         while (check == true){
             Requesets();
             Random.seed = System.DateTime.Now.Millisecond;
-            Debug.Log("concha tu maree");
+            //Debug.Log("concha tu maree");
             if ((n_t_2 == 1 && n_m_2 == 0))
             {
                 Debug.Log("Tomata: " + n_t_2 + "Meat: " + n_m_2);
@@ -170,15 +167,14 @@ public class Combinations : MonoBehaviour
         
     }
 
-    void Score(GameObject child_t)
+    void Score(GameObject child_t, Plate plateScript)
     {
-        
-        Debug.Log("Entro: " + plate.tomata_count_1 + "XD" + plate.meat_count_1);
+        //Debug.Log("Entro: " + plate.tomata_count_1 + "XD" + plate.meat_count_1);
         if (n_t == plate.tomata_count_1 && n_m == plate.meat_count_1 || n_t_2 == plate.tomata_count_2 && n_m_2 == plate.meat_count_2)
         {
             point += 1;
             GetComponent<AudioSource>().Play();
-            Debug.Log(child_t.tag);
+            //Debug.Log(child_t.tag);
             Destroy(child_t);
             recipe_done = true;
             scoreText.text = "Score: " + point.ToString();
@@ -187,13 +183,15 @@ public class Combinations : MonoBehaviour
             plate.tomata_count_2 = 0;
             plate.meat_count_2 = 0;
 
+            // Reseteamos la variable que marca si el plato ha sido pasado entre players almenos una vez
+            plateScript.passed = false;
         }
 
         else if (n_t == plate2.tomata_count_1 && n_m == plate2.meat_count_1 || n_t_2 == plate2.tomata_count_2 && n_m_2 == plate2.meat_count_2)
         {
             point += 1;
             GetComponent<AudioSource>().Play();
-            Debug.Log(child_t.tag);
+            //Debug.Log(child_t.tag);
             Destroy(child_t);
             recipe_done = true;
             scoreText.text = "Score: " + point.ToString();
@@ -202,6 +200,8 @@ public class Combinations : MonoBehaviour
             plate2.tomata_count_2 = 0;
             plate2.meat_count_2 = 0;
 
+            // Reseteamos la variable que marca si el plato ha sido pasado entre players almenos una vez
+            plateScript.passed = false;
         }
 
 

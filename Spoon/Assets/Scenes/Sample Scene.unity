@@ -747,10 +747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5b173062df6c8498e632e0074c2e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooked_meat: {fileID: 1277483834372416, guid: d3c3e6c8e08dfc94aa7f6d65820967e4,
-    type: 3}
-  overcooked_meat: {fileID: 1391160862818300, guid: 2822baf52b274144091e746e055634ad,
-    type: 3}
   scaleFactor: 0.6
   positionAdd: {x: 6, y: 0, z: 0}
   bar: {fileID: 567827438}
@@ -1082,6 +1078,7 @@ MonoBehaviour:
   meat_count_1: 0
   tomata_count_2: 0
   meat_count_2: 0
+  passed: 0
 --- !u!1 &222463083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,10 +2918,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5b173062df6c8498e632e0074c2e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooked_meat: {fileID: 1391160862818300, guid: 2822baf52b274144091e746e055634ad,
-    type: 3}
-  overcooked_meat: {fileID: 1277483834372416, guid: d3c3e6c8e08dfc94aa7f6d65820967e4,
-    type: 3}
   scaleFactor: 0.6
   positionAdd: {x: 0, y: 0, z: 6}
   bar: {fileID: 0}
@@ -7243,6 +7236,7 @@ MonoBehaviour:
   meat_count_1: 0
   tomata_count_2: 0
   meat_count_2: 0
+  passed: 0
 --- !u!114 &2005973727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7255,7 +7249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdfd3e28a03aa343a284b4621a960b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addPosition: {x: 13.7, y: 0, z: -2}
+  addPosition: {x: 0, y: 0, z: -2}
 --- !u!1 &2058709806
 GameObject:
   m_ObjectHideFlags: 0

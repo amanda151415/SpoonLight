@@ -15,15 +15,14 @@ public class Plate : MonoBehaviour
     public int tomata_count_2 = 0;
     public int meat_count_2 = 0;
 
+    public bool passed = false;
+
     private void OnCollisionEnter(Collision other)
     {
         
 
         GameObject collider = other.gameObject;
         Transform collider_t = other.transform;
-        // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un ingrediente
-        
-               
 
         if (collider.name == "Plate1")
         {
@@ -44,11 +43,7 @@ public class Plate : MonoBehaviour
                     meat_count_1 += 1;
 
                 }
-                
-                
-
             }
-            
 
             if (tomata_count_1 == combinations.n_t & meat_count_1 == combinations.n_m || tomata_count_1 == combinations.n_t_2 & meat_count_1 == combinations.n_m_2)
             {
@@ -121,6 +116,6 @@ public class Plate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(gameObject.name + ": " + passed);
     }
 }

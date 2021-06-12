@@ -57,7 +57,10 @@ public class CookIngredient : MonoBehaviour
 
                 // Reiniciamos contador
                 cookTime = 5.0f;
+                overcookTime = 10.0f;
                 isCooking = false;
+                StopAnimateBar();
+                ResetAnimateBar();
             }
             else if (cookTime < 0.0f)
             {
@@ -71,7 +74,9 @@ public class CookIngredient : MonoBehaviour
 
                 // Reiniciamos contador
                 cookTime = 5.0f;
+                overcookTime = 10.0f;
                 isCooking = false;
+                StopAnimateBar();
                 ResetAnimateBar();
             }
         }
@@ -115,13 +120,10 @@ public class CookIngredient : MonoBehaviour
             if (cookTime < 0.0 & !isOvercooked)
             {
                 isOvercooked = true;
+                bar.transform.GetComponent<Image>().color = Color.blue;
                 StopAnimateBar();
                 ResetAnimateBar();
                 AnimateBar_over();
-            }
-            else if (overcookTime < 0.0f)
-            {
-                bar.transform.GetComponent<Image>().color = Color.blue;
             }
         }
     }
