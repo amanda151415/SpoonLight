@@ -16,11 +16,12 @@ public class PutInPlate : MonoBehaviour
         Transform collider_t = other.transform;
         foreach (Transform child_t in collider_t)
         {
+            // Cada vez que un player colisiona con un plato, comprobamos si lleva algun ingrediente
             if (child_t.tag == "Ingredient" || child_t.tag == "CutIngredient" || child_t.tag == "CookedIngredient")
             {
                 child = child_t.gameObject;
-
             }
+
             // No nos interesa meter en el plato ingredientes quemados
             else if (child_t.tag == "OvercookedIngredient")
             {
@@ -35,6 +36,7 @@ public class PutInPlate : MonoBehaviour
             int leftParenthesis = name_item.IndexOf("(");
             string result = name_item.Substring(0, leftParenthesis);
             
+            // Adaptamos la escala y la posición segun el ingrediente que sea, para mejorar la visualización
             if (result == "Meat")
             {
                 if (child.tag == "CookedIngredient")
@@ -54,13 +56,11 @@ public class PutInPlate : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         

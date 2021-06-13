@@ -2,16 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class IngredientStates : MonoBehaviour
 {
     //public List<GameObject> ingredientsList = new List<GameObject>();
     public float scaleFactor;
     public Vector3 positionAdd;
     public GameObject ingredientPrefab;
-
-
 
     private void OnCollisionEnter(Collision other)
     {
@@ -46,8 +42,6 @@ public class IngredientStates : MonoBehaviour
 
     void Spawn(Collision other)
     {
-        
-
         Vector3 position = new Vector3(75, 7, 85);
         GameObject ingredient = Instantiate(ingredientPrefab, position, ingredientPrefab.transform.rotation);
         // Instanciamos el ingrediente como un hijo del player para que as� lo siga
