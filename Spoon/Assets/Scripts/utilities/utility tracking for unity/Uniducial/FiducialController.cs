@@ -191,19 +191,19 @@ public class FiducialController : MonoBehaviour
                 {
                     if (Input.GetKey(KeyCode.Keypad8))
                     {
-                        transform.position += Vector3.forward * 0.2f;
+                        transform.position += Vector3.forward * 0.4f;
                     }
                     if (Input.GetKey(KeyCode.Keypad2))
                     {
-                        transform.position += Vector3.forward * -0.2f;
+                        transform.position += Vector3.forward * -0.4f;
                     }
                     if (Input.GetKey(KeyCode.Keypad6))
                     {
-                        transform.position += Vector3.right * 0.2f;
+                        transform.position += Vector3.right * 0.4f;
                     }
                     if (Input.GetKey(KeyCode.Keypad4))
                     {
-                        transform.position += Vector3.right * -0.2f;
+                        transform.position += Vector3.right * -0.4f;
                     }
                 }
                 if (MarkerID == 2)
@@ -211,22 +211,22 @@ public class FiducialController : MonoBehaviour
                     if (Input.GetKey(KeyCode.W))
                     {
                         transform.rotation = Quaternion.Euler(0, 0, 0);
-                        transform.position += Vector3.forward * 0.05f;
+                        transform.position += Vector3.forward * 0.4f;
                     }
                     if (Input.GetKey(KeyCode.S))
                     {
                         transform.rotation = Quaternion.Euler(0, 180, 0);
-                        transform.position += Vector3.forward * -0.05f;
+                        transform.position += Vector3.forward * -0.4f;
                     }
                     if (Input.GetKey(KeyCode.D))
                     {
                         transform.rotation = Quaternion.Euler(0, 90, 0);
-                        transform.position += Vector3.right * 0.05f;
+                        transform.position += Vector3.right * 0.4f;
                     }
                     if (Input.GetKey(KeyCode.A))
                     {
                         transform.rotation = Quaternion.Euler(0, -90, 0);
-                        transform.position += Vector3.right * -0.05f;
+                        transform.position += Vector3.right * -0.4f;
                     }
                     if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
                     {
@@ -242,19 +242,19 @@ public class FiducialController : MonoBehaviour
                 {
                     if (Input.GetKey(KeyCode.I))
                     {
-                        transform.position += Vector3.forward * 0.2f;
+                        transform.position += Vector3.forward * 0.4f;
                     }
                     if (Input.GetKey(KeyCode.K))
                     {
-                        transform.position += Vector3.forward * -0.2f;
+                        transform.position += Vector3.forward * -0.4f;
                     }
                     if (Input.GetKey(KeyCode.L))
                     {
-                        transform.position += Vector3.right * 0.2f;
+                        transform.position += Vector3.right * 0.4f;
                     }
                     if (Input.GetKey(KeyCode.J))
                     {
-                        transform.position += Vector3.right * -0.2f;
+                        transform.position += Vector3.right * -0.4f;
                     }
                 }
             }

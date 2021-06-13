@@ -13,10 +13,9 @@ public class CutIngredient : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-
         GameObject collider = other.gameObject;
         Transform collider_t = other.transform;
-        // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un ingrediente
+        // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un tomate
         foreach (Transform child_t in collider_t)
         {
             string name_item = child_t.ToString();
@@ -24,6 +23,7 @@ public class CutIngredient : MonoBehaviour
             string result = name_item.Substring(0, leftParenthesis);
             if (result == "Tomato")
             {
+                // Si se trata de un tomate empezamos a animar la barra y ponemos un sonido
                 GetComponent<AudioSource>().Play();
                 AnimateBar();
             }
@@ -36,7 +36,7 @@ public class CutIngredient : MonoBehaviour
 
         GameObject collider = other.gameObject;
         Transform collider_t = other.transform;
-        // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un ingrediente
+        // Buscamos si hay algun child en el player con el que hemos colisionado que corresponda a un tomate
         foreach (Transform child_t in collider_t)
         {
             string name_item = child_t.ToString();
@@ -45,29 +45,25 @@ public class CutIngredient : MonoBehaviour
             if (result == "Tomato")
             {
                 child = child_t.gameObject;
-
             }
         }
 
-        // Si existe, lo eliminamos
+        // Si corresponde a un tomate empezamos a cortar
         if (child != null)
         {
-
-
+            // Bajamos el contador del tiempo hasta que pasen 5 segundos
             cuttime -= Time.deltaTime;
-            float sec = cuttime % 60;
-            Debug.Log(cuttime);
 
+            // Una vez recorridos, instanciamos un prefab de tomate cortado y lo ponemos como child del player
             if (cuttime < 0.0f)
             {
-
-                Vector3 position = new Vector3(75, 7, 85);
-
                 GameObject ingredient = Instantiate(tomato_cutted, child.transform.position, Quaternion.identity);
-                // Instanciamos el ingrediente como un hijo del player para que as� lo siga
+                // Instanciamos el ingrediente como un hijo del player para que así lo siga
                 ingredient.transform.parent = other.transform;
+                // Añadimos una posición y una escala para adaptarlo visualmente al player
                 ingredient.transform.position = other.transform.position + positionAdd;
                 ingredient.transform.localScale = new Vector3(1, 1, 1) * scaleFactor;
+                // Eliminamos el tomate antiguo
                 Destroy(child);
                 ResetAnimateBar();
             }
@@ -76,11 +72,11 @@ public class CutIngredient : MonoBehaviour
 
     private void OnCollisionExit(Collision other)
     {
+        // Reseteamos la barra y tiempo cada vez que salimos de la colisión
         StopAnimateBar();
         ResetAnimateBar();
         GetComponent<AudioSource>().Stop();
         cuttime = 5.0f;
-        Debug.Log("Exit:)");
     }
 
     public void AnimateBar()
@@ -98,14 +94,11 @@ public class CutIngredient : MonoBehaviour
         LeanTween.scaleX(bar, 0, 0);
     }
 
-
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         

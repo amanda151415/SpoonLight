@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RemoveIngredients : MonoBehaviour
 {
-
     private void OnCollisionEnter(Collision other)
     {
         GameObject child = null;
@@ -23,10 +22,11 @@ public class RemoveIngredients : MonoBehaviour
         // Si existe, lo eliminamos
         if (child != null)
         {
-            SoundManager.Instance.PlayDropTrash();//
+            SoundManager.Instance.PlayDropTrash();
 
-            Debug.Log("Entro");
-            Destroy(child);
+            // Reseteamos la variable passed
+            Plate plateScript = collider.GetComponent<Plate>();
+            plateScript.passed = false;
         }
     }
 
