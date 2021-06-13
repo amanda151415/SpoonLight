@@ -52,10 +52,6 @@ public class CookIngredient : MonoBehaviour
             // Si el ingrediente se ha quemado
             if (overcookTime < 0.0f)
             {
-                // Cambiamos el color a azul para alertar
-                // El material en el que tenemos que cambiar el color es un child del ingrediente, por eso tenemos que hacer este GetChild(0)
-                //var ingredient_renderer = cooking_ingredient.transform.GetChild(0).GetComponent<Renderer>();
-                //ingredient_renderer.material.color = Color.black;
                 // Cambiamos el tag
                 cooking_ingredient.tag = "OvercookedIngredient";
                 // Ponemos el ingrediene como child del player para llevarselo
@@ -74,14 +70,19 @@ public class CookIngredient : MonoBehaviour
             // Si estamos dentro del tiempo de ingrediente cocinado
             else if (cookTime < 0.0f)
             {
+                // Cambiamos el color de la carne a marrón (cocinado)
+                // El material en el que tenemos que cambiar el color es un child del ingrediente, por eso tenemos que hacer este GetChild(0)
                 var ingredient_renderer = cooking_ingredient.transform.GetChild(0).GetComponent<Renderer>();
                 ingredient_renderer.material.color = new Color((100f / 255f), (53 / 255f), (26 / 255f));
+
+                // Cambiamos el tag
                 cooking_ingredient.tag = "CookedIngredient";
+                // Ponemos el ingrediente como child del player para que se lo lleve
                 cooking_ingredient.transform.parent = other.transform;
                 cooking_ingredient.transform.position = other.transform.position + positionAdd;
                 cooking_ingredient.transform.localScale = new Vector3(1, 1, 1) * scaleFactor;
 
-                // Reiniciamos contador
+                // Reiniciamos los contadores y la barra de tiempo
                 cookTime = 5.0f;
                 overcookTime = 10.0f;
                 isCooking = false;
@@ -127,6 +128,7 @@ public class CookIngredient : MonoBehaviour
             if (cookTime < 0.0 & !isOvercooked)
             {
                 isOvercooked = true;
+                // Cambiamos el color de la barra a azul para alertar de que el ingrediente se está quemando
                 bar.transform.GetComponent<Image>().color = Color.blue;
                 StopAnimateBar();
                 ResetAnimateBar();

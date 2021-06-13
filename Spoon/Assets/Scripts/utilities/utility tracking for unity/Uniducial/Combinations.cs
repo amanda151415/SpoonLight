@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Combinations : MonoBehaviour
 {
+    // Imagenes que muestran la receta que hay que hacer en este momento
     public Image t1;
     public Image t2;
     public Image m1;
@@ -16,30 +17,35 @@ public class Combinations : MonoBehaviour
     public Image m1_2;
     public Image t1_m1_2;
 
+    // Contadores para el número de tomates y de carnes
     public int n_t = 0;
     public int n_m = 0;
     public int n_t_2 = 0;
     public int n_m_2 = 0;
     private int seed = 0;
 
+    // Número de puntos
     private int point = 0;
     private bool recipe_done = false;
+    // Contador de tiempo para ralizar las recetas
     private float time = 60.0f;
 
+    // Textos para mostrar en pantalla
     public Text scoreText;
     public Text timeLeft;
 
     public Plate plate;
     public Plate plate2;
 
-    // Start is called before the first frame update
     void Start()
     {
+        // Empezamos una coroutine para ir mostrando nuevas recetas cada 60 segundos sin parar
         StartCoroutine(WaitBeforeRemove());
     }
 
     void Requesets()
     {       
+        // Definimos rangos para generar las combinaciones de los platos de forma random
         n_t = Random.Range(0, 3);
         n_m = Random.Range(0, 2);
         n_t_2 = Random.Range(0, 3);
@@ -52,7 +58,7 @@ public class Combinations : MonoBehaviour
         Transform collider_t = other.transform;
         GameObject object_to_destroy = null;
 
-        Debug.Log(collider_t.name);
+        // Comprobamos que haya colisionado uno de los dos players
         if (collider.tag == "Player1" || collider.tag == "Player2")
         {
             foreach (Transform child_t in collider_t)
@@ -61,9 +67,7 @@ public class Combinations : MonoBehaviour
                 Plate plateScript = collider.GetComponent<Plate>();
                 if (child_t.tag == "Plate" & plateScript.passed == true)
                 {
-
                     object_to_destroy = child_t.gameObject;
-
                     Score(object_to_destroy, plateScript);
                 }
             }
@@ -71,17 +75,23 @@ public class Combinations : MonoBehaviour
     }
         IEnumerator WaitBeforeRemove()
     {
+        // Empezamos a generar recetas
         bool start = true;
         while (start == true)
         {
+            // Generamos los rangos aleatorios
             Requesets();
+            // Definimos una seed para hacer el random que dependa del tiempo actual, así cada vez que se inicie el juego será diferente
             Random.seed = System.DateTime.Now.Millisecond;
+
+            // Comprobamos los contadores y generamos la receta acorde a eso
             if ((n_t == 1 && n_m == 0))
             {
-                Debug.Log("Tomata: " + n_t + "Meat: " + n_m);
                 t1.enabled = true;
                 SecondRecipe();
+                // Hasta que la receta no esté completa o haya pasado el tiempo del contador, no seguimos con la coroutine para generar nuevas recetas
                 yield return new WaitUntil(() => (recipe_done == true | time < 0.0f));
+                // Una vez la receta se ha completado o el tiempo se ha agotado, reiniciamos y generamos una nueva receta
                 t1.enabled = false;
                 recipe_done = false;
                 time = 60.0f;
@@ -89,7 +99,6 @@ public class Combinations : MonoBehaviour
             }
             else if ((n_t == 1 && n_m == 1))
             {
-                Debug.Log("Tomata: " + n_t + "Meat: " + n_m);
                 t1_m1.enabled = true;
                 SecondRecipe();
                 yield return new WaitUntil(() => (recipe_done == true | time < 0.0f));
@@ -99,7 +108,6 @@ public class Combinations : MonoBehaviour
             }
             else if ((n_t == 0 && n_m == 1))
             {
-                Debug.Log("Tomata: " + n_t + "Meat: " + n_m);
                 m1.enabled = true;
                 SecondRecipe();
                 yield return new WaitUntil(() => (recipe_done == true | time < 0.0f));
@@ -109,7 +117,6 @@ public class Combinations : MonoBehaviour
             }
             else if ((n_t == 2 && n_m == 0))
             {
-                Debug.Log("Tomata: " + n_t + "Meat: " + n_m);
                 t2.enabled = true;
                 SecondRecipe();
                 yield return new WaitUntil(() => (recipe_done == true | time < 0.0f));
@@ -130,7 +137,6 @@ public class Combinations : MonoBehaviour
         while (check == true){
             Requesets();
             Random.seed = System.DateTime.Now.Millisecond;
-            //Debug.Log("concha tu maree");
             if ((n_t_2 == 1 && n_m_2 == 0))
             {
                 t1_2.enabled = true;
@@ -152,20 +158,24 @@ public class Combinations : MonoBehaviour
                 t2_2.enabled = true;
                 check = false;
             }
-
         }
-        
     }
 
     void Score(GameObject child_t, Plate plateScript)
     {
+        // Comprobamos que el plato que lleva el player tiene una de las dos combinaciones que muestran la receta
         if (n_t == plate.tomata_count_1 && n_m == plate.meat_count_1 || n_t_2 == plate.tomata_count_2 && n_m_2 == plate.meat_count_2)
         {
+            // Si es correcto sumamos un punto al contador
             point += 1;
             GetComponent<AudioSource>().Play();
+
+            // Eliminamos el plato del player
             Destroy(child_t);
+            // Marcamos la receta como completada para generar una nueva
             recipe_done = true;
             scoreText.text = "Score: " + point.ToString();
+            // Reiniciamos los contadores
             plate.tomata_count_1 = 0;
             plate.meat_count_1 = 0;
             plate.tomata_count_2 = 0;
